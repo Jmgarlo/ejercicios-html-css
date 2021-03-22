@@ -8,5 +8,26 @@ Añade las reglas necesarias también para que la segunda lista:
 
 1. En lugar de tener puntos a la izquierda de los elementos tenga números romanos.
 2. Excepto "A Coruña" que no debe tener número romano a la izquierda. */
-
-c
+.lista li:last-child{
+    background-color: rgb(45, 40, 172) ;
+}
+.lista li:nth-child(odd){
+    text-decoration: underline green;
+}
+.lista{
+    list-style-type:none;
+}
+.lista li{
+    display:inline;
+    margin-left:10px;
+}
+.lista li:after{
+    content: " 😁";
+}
+[lang="en"]{
+    font-size:2em;
+    text-transform: uppercase;
+}
+#provincias li:not(:nth-child(2)){
+    list-style-type: upper-roman;
+}
