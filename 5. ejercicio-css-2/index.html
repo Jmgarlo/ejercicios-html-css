@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio HTML 1</title>
+  <link rel="stylesheet" href="ejercicio3.css">
+</head>
+
+<body>
+  <div>
+    <form action="" method="get">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <div>
+          <label for="nombre">Nombre: </label>
+          <input type="text" id="nombre" required autofocus>
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input type="email" placeholder="Escribe la URL de tu página web personal" id="email" required>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Fecha,hora,etc...</legend>
+        <div>
+          <label for="fecha">Fecha: </label>
+          <input type="date" name="fecha">
+        </div>
+        <div>
+          <label for="tiempo">Tiempo: </label>
+          <input type="time" id="tiempo">
+        </div>
+        <div>
+          <label for="fechahora">Fecha y hora: </label>
+          <input type="datetime" name="fechahora">
+        </div>
+        <div>
+          <label for="mes">Mes: </label>
+          <input type="month" id="mes">
+        </div>
+        <div>
+          <label for="semana">Semana: </label>
+          <input type="week" id="semana">
+        </div>
+
+      </fieldset>
+      <fieldset>
+        <legend>Otros datos</legend>
+        <div>
+          <label for="numero">Número: </label>
+          <input type="number" id="numero" min="-10" max="10">
+        </div>
+        <div>
+          <label for="telefono">Teléfono: </label>
+          <input type="tel" id="telefono" value="911234567" readonly>
+        </div>
+        <div>
+          <label for="termbusqueda">Término de búsqueda: </label>
+          <input type="search" id="termbusqueda" disabled>
+        </div>
+        <div>
+          <label for="color">Color favorito: </label>
+          <input type="color" id="color">
+        </div>
+      </fieldset>
+      <div>
+        <input type="submit" value="Enviar">
+      </div>
+
+    </form>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+/* - Haz que el formulario siempre esté centrado en la pantalla y que tenga un ancho máximo de 800px y un ancho mínimo de 400px.
+- Haz que todos los campos obligatorios aparezcan con un borde rojo.
+- Haz que todos los fieldsets tengan fondo gris claro y un padding de `1rem`.
+- Haz que al pasar por encima el ratón de los fieldsets cambien de color de fondo a un gris más oscuro.
+- Haz que el primer y último fieldset tengan un borde inferior de color negro y de 5 píxeles de ancho.
+- Haz que el botón de envío tenga fondo negro, texto blanco y no tenga borde. */
+
+div{
+    margin-top:7px;
+    margin-bottom:7px;
+}
+body > div{
+    max-width:800px;
+    min-height:400px;
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+[required]{
+    border-color:red;
+}
+fieldset{
+    background-color: grey;
+    padding:1rem;
+}
+form fieldset:not(:nth-child(2)){
+    border-bottom-color: black;
+    border-bottom-width:5px;
+}
+
+fieldset:hover{
+    background-color: rgb(59, 59, 59);
+}
+[type=submit]{
+    background-color: black;
+    color:white;
+    border:none;
+}

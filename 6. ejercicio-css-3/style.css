@@ -1,0 +1,60 @@
+/* @import "mobile.css" (max-width: 600px); */
+html{
+     font-family: arial;
+}
+body{
+    margin:0;
+}
+.titulos{
+    width:100%;
+    background-color:black;
+    color:white;
+}
+h1{
+    padding-top:40px;
+}
+h1, h2, header>p{
+    padding-left:20px;
+}
+header>p{
+    padding-bottom:40px;
+}
+[id="comentarios"]{
+    height:100px;
+}
+
+[type="submit"]{
+    background-color: black;
+    color:white;
+}
+.artcoment{
+    position:relative;
+    max-width: 50%;
+    left:25%;
+    margin-bottom:50px;
+}
+.formulario{
+    width:100%;
+}
+input{
+    width:100%;
+}
+@media (max-width:600px){
+    .artcoment{
+        max-width: 80%;
+        left:10%;
+    }
+    img{
+        width:100%;
+    }
+}
+@media(min-width:600px){
+    img{
+        float:right;
+        height:100%;
+
+    }
+    .parrafo1{
+        float:right;
+    }
+}

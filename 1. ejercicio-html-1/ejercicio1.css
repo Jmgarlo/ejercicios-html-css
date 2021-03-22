@@ -1,0 +1,69 @@
+h1, h2, h3{
+ margin:7px;
+}
+h2{
+margin:12px
+}
+h3{
+    margin-left:15px;
+}
+div, nav, header, article, aside, section, .footerprincipal, .footerarticle{
+    margin:5px;
+    border:5px;
+    border-style:solid;
+}
+.headerprincipal, nav, article, .divaside, .footerprincipal{
+    border-radius:10px;
+}
+.headerarticle, aside, section, .footerarticle{
+    border-radius:6px;
+}
+.caja{
+    width:500px;
+    height:800px;
+    border-color:grey;
+    border-radius:15px;
+}
+.headerprincipal{
+    height:13%;
+    border-color:green;
+}
+nav{
+    height:7%;
+    border-color:pink;
+}
+.headerarticle{
+    height:9%;
+    border-color:green;
+    margin-bottom:75%;
+}
+section{
+    border-color:pink;
+    height:10%;
+}
+.footerarticle{
+    border-color:yellow;
+    height:6%;
+}
+.divaside, aside, .footerprincipal, article{
+    float:left
+}
+article{
+    width:54%;
+    height:61%;
+    border-color:blue;
+}
+.divaside{
+    height:61%;
+    border-color:orange; 
+}
+aside{
+    width:89%;
+    height:40%;
+    border-color:cyan; 
+}
+.footerprincipal{
+    width:96%;
+    height:9%;
+    border-color:yellow; 
+}

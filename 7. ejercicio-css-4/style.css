@@ -1,0 +1,125 @@
+html{
+    font-family:arial;
+}
+body{
+    margin:0;
+    background-color: #f2a54a;
+    text-align:center;
+}
+.grid-container{
+    position:fixed;
+    display:grid;
+    grid-template-areas:
+    'title title title'
+    'team1 team2 team3';
+    gap:40px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+header{
+    background-color: white;
+    text-align:center;
+    padding-top:25px;
+    padding-bottom:30px;
+}
+h2{
+    text-align:center;
+}
+footer{
+    background-color: #7000ff;
+    color:white;
+    font-size:15px;
+    padding:10px;
+}
+.social{
+    display:flex;
+    justify-content: center;
+}
+article{
+    box-shadow: 0 4px 5px black;
+    transition-property:transform;
+    transition-duration:200ms;
+}
+article:hover{
+    transform: scale(1.2);
+    box-shadow: 0 4px 5px black;
+    filter:blur;
+}
+.team1, .team2, .team3{
+   animation-name:carga;
+}
+.fotocapitan, .fotothor,.fotocalico{
+    border-radius:50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% auto;
+    width:100px;
+    height:100px;
+    margin: auto;
+
+}
+.fotocapitan{
+    background-image:url("capamerica.jpg");
+}
+.fotothor{
+    background-image:url("thor.jpg");
+}
+.fotocalico{
+    background-image:url("calicoelec.jpg");
+}
+.facebook{
+    background-image:url("facebook.png");
+}
+.twitter{
+    background-image:url("twitter.png");
+}
+.instagram{
+    background-image:url("instagram.png");
+}
+.linkedin{
+    background-image:url("linkedin.png");
+}
+.facebook, .twitter ,.instagram, .linkedin{
+    border-radius:50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% auto;
+    width:35px;
+    height:35px;
+}
+.facebook, .twitter ,.instagram{
+    margin-right:10px;
+}
+header{
+    align-items:center;
+}
+.title{
+    font-weight: bold;
+    margin:50px;
+    color:white;
+    font-size:120px;
+    grid-area:title;
+    animation-name:carga;
+    animation-duration:3s;
+}
+.team1{
+    grid-area:team1;
+    animation-duration:3.5s;
+}
+.team2{
+    grid-area:team2;
+    animation-duration:4s;
+}
+.team3{
+    grid-area:team3;
+    animation-duration:4.5s;
+}
+@keyframes carga {
+  0%, 50%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
