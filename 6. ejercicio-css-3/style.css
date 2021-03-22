@@ -38,6 +38,7 @@ header>p{
 input{
     width:100%;
 }
+/*Esto sirve para que la columna del articulo y el formulario tenga menos margen y ocupen mas espacio en pantallas pequeñas*/
 @media (max-width:600px){
     .artcoment{
         max-width: 80%;
@@ -47,6 +48,8 @@ input{
         width:100%;
     }
 }
+/*Con esto colocamos la foto al lado del párrafo si la pantalla es más grande que la de un móvil(he puesto 600 como media y para poder probarlo bien)*/
+
 @media(min-width:600px){
     img{
         float:right;

@@ -10,37 +10,54 @@
 </head>
 
 <body>
+  <!--- El método de envío del formulario debe ser GET.
+  - El destino del envío del formulario debe ser "". -->
   <form action="" method="get">
+    <!--- El formulario debe estar estructurado usando las etiquetas fieldset (con sus legend) -->
     <fieldset>
       <legend>Datos personales</legend>
       <div>
+        <!--- **Nombre**, con un control de tipo texto que sea obligatorio cubrirlo y con autofoco.
+        - Todos los campos anteriores deben tener su label asociado mediante la propiedad _htmlfor_. -->
         <label for="nombre">Nombre: </label>
         <input type="text" id="nombre" required autofocus>
       </div>
       <div>
+        <!--- **Correo electrónico**, con un control de tipo email que sea obligatorio. -->
         <label for="email">Email: </label>
-        <input type="email" placeholder="Escribe la URL de tu página web personal" id="email" required>
+        <input type="email" id="email" required>
+      </div>
+      <div>
+        <!--- **URL**, con un control de tipo url que cuando esté vacío muestre dentro la ayuda "Escribe la URL de tu página web
+        personal" usando la propiedad _placeholder_. -->
+        <label for="url">URL: </label>
+        <input type="url" placeholder="Escribe la URL de tu página web personal" id="url">
       </div>
     </fieldset>
     <fieldset>
       <legend>Fecha,hora,etc...</legend>
       <div>
+        <!--- **Fecha**, con un control de tipo date. -->
         <label for="fecha">Fecha: </label>
         <input type="date" name="fecha">
       </div>
       <div>
+        <!--- **Tiempo**, con un control de tipo time. -->
         <label for="tiempo">Tiempo: </label>
         <input type="time" id="tiempo">
       </div>
       <div>
+        <!--- **Fecha y hora**, con un control de tipo datetime. -->
         <label for="fechahora">Fecha y hora: </label>
         <input type="datetime" name="fechahora">
       </div>
       <div>
+        <!--- **Mes**, con un control de tipo month. -->
         <label for="mes">Mes: </label>
         <input type="month" id="mes">
       </div>
       <div>
+        <!--- **Semana**, con un control de tipo week. -->
         <label for="semana">Semana: </label>
         <input type="week" id="semana">
       </div>
@@ -49,23 +66,28 @@
     <fieldset>
       <legend>Otros datos</legend>
       <div>
+        <!--- **Número**, con un control de tipo number que limite la entrada a un valor entre -10 y 10. -->
         <label for="numero">Número: </label>
         <input type="number" id="numero" min="-10" max="10">
       </div>
       <div>
+        <!--- **Teléfono**, con un control de tipo tel que tenga un valor inicial y que no se pueda editar. -->
         <label for="telefono">Teléfono: </label>
         <input type="tel" id="telefono" value="911234567" readonly>
       </div>
       <div>
+        <!--- **Término de búsqueda**, con un control de tipo search y que este deshabiltado. -->
         <label for="termbusqueda">Término de búsqueda: </label>
         <input type="search" id="termbusqueda" disabled>
       </div>
       <div>
+        <!--- **Color favorito**, con un control de tipo color. -->
         <label for="color">Color favorito: </label>
         <input type="color" id="color">
       </div>
     </fieldset>
     <div>
+      <!--- Un botón de envío. -->
       <input type="submit" value="Enviar">
     </div>
 

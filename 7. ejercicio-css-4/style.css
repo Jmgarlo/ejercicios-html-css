@@ -1,11 +1,18 @@
+/*Ponemos la misma fuente a toda la web*/
 html{
     font-family:arial;
 }
+/*Quitamos el margen del body para que se pegue a los bordes de la pantalla*/
+/*Ponemos el color de fondo aquí para que siempre ocupe toda la pantalla y alineamos todo al centro*/
 body{
     margin:0;
     background-color: #f2a54a;
     text-align:center;
 }
+h2{
+    text-align:center;
+}
+/*Definimos el tamaño del grid, la posición y lo centramos en la pantalla*/
 .grid-container{
     position:fixed;
     display:grid;
@@ -17,48 +24,23 @@ body{
     top:50%;
     transform: translate(-50%,-50%);
 }
+/*Diseñamos los artículos de cada persona*/
+/*En el header estará la foto, nombre y los iconos de redes sociales, con fondo blanco. Todo centrado*/
 header{
     background-color: white;
     text-align:center;
     padding-top:25px;
     padding-bottom:30px;
+    align-items:center;
 }
-h2{
-    text-align:center;
-}
+/*En el footer estará solo el texto con fondo morado*/
 footer{
     background-color: #7000ff;
     color:white;
     font-size:15px;
     padding:10px;
 }
-.social{
-    display:flex;
-    justify-content: center;
-}
-article{
-    box-shadow: 0 4px 5px black;
-    transition-property:transform;
-    transition-duration:200ms;
-}
-article:hover{
-    transform: scale(1.2);
-    box-shadow: 0 4px 5px black;
-    filter:blur;
-}
-.team1, .team2, .team3{
-   animation-name:carga;
-}
-.fotocapitan, .fotothor,.fotocalico{
-    border-radius:50%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 100% auto;
-    width:100px;
-    height:100px;
-    margin: auto;
-
-}
+/*Añadimos las fotos como imagen de fondo en sus div*/
 .fotocapitan{
     background-image:url("capamerica.jpg");
 }
@@ -68,6 +50,17 @@ article:hover{
 .fotocalico{
     background-image:url("calicoelec.jpg");
 }
+/*Redondeamos las imágenes de las fotos*/
+.fotocapitan, .fotothor,.fotocalico{
+    border-radius:50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% auto;
+    width:100px;
+    height:100px;
+    margin: auto;
+}
+/*Añadimos los iconos de redes sociales como imagen de fondo en sus div*/
 .facebook{
     background-image:url("facebook.png");
 }
@@ -80,6 +73,7 @@ article:hover{
 .linkedin{
     background-image:url("linkedin.png");
 }
+/*Redondeamos las imágenes de los iconos*/
 .facebook, .twitter ,.instagram, .linkedin{
     border-radius:50%;
     background-repeat: no-repeat;
@@ -88,19 +82,49 @@ article:hover{
     width:35px;
     height:35px;
 }
+/*Separamos los iconos entre ellos*/
 .facebook, .twitter ,.instagram{
     margin-right:10px;
 }
-header{
-    align-items:center;
+
+/*Colocamos los iconos de redes sociales centrados y en horizontal*/
+.social{
+    display:flex;
+    justify-content: center;
 }
+/*Añadimos al artículo de cada persona una transicion y una duracion*/
+article{
+    box-shadow: 0 4px 5px black;
+    transition-property:transform;
+    transition-duration:200ms;
+}
+/*Aqui definimos en que consiste la transicion. Se activará al poner el cursor encima por :hover*/
+article:hover{
+    transform: scale(1.2);
+    box-shadow: 0 4px 5px black;
+}
+/*Creamos la animación para que la opacidad de los objetos vaya de 0(no se ve) a 1(totalmente visible)*/
+@keyframes carga {
+  0%, 50%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*Añadimos la animación a todos los elementos*/
+.team1, .team2, .team3, .title{
+   animation-name:carga;
+}
+/*Le damos a cada elemento su área en el grid y una duración en la animación*/
+/*La duración de la animación de cada elemento es algo mayor que el de la anterior*/
+/*para que aparezcan secuencialmente*/
 .title{
     font-weight: bold;
     margin:50px;
     color:white;
     font-size:120px;
     grid-area:title;
-    animation-name:carga;
     animation-duration:3s;
 }
 .team1{
@@ -114,12 +138,4 @@ header{
 .team3{
     grid-area:team3;
     animation-duration:4.5s;
-}
-@keyframes carga {
-  0%, 50%{
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
